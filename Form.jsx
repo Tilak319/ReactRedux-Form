@@ -229,12 +229,13 @@ function App() {
               maxLength="10"
               onChange={phoneFunc} />
 
-            {/* <Link to="/Login" type="submit" id="btn1" value="Submit" onClick={handleForm}>Log in</Link> */}
-            
-              <Switch>
-                <Route path="/login" component={Login} />
-                <Link to="/Login" type="submit" id="btn1" value="Submit" onClick={handleForm}>Log in</Link>
-              </Switch>
+            <ChevronLink 
+            onClick={validate}
+              reactRouterLinkComponent={Link}
+              to="/login"
+            >
+              Login
+            </ChevronLink>
            
           </form>
         </Box>
